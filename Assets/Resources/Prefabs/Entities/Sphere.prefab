@@ -107,8 +107,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5ea29b5f66b8c64f89c2c56aae205b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncInterval: 0.1
   targetTag: Player
-  target: {fileID: 0}
+  target: {fileID: 4134456330654040, guid: ff0e6e9718d372946bb32e500c5573b6, type: 3}
 --- !u!195 &4710837825144917851
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -143,10 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverOnly: 1
+  serverOnly: 0
   localPlayerAuthority: 0
-  m_AssetId: 
-  m_SceneId: 1704309555
+  m_AssetId: cee0e501604502946961d37f78785da3
+  m_SceneId: 0
 --- !u!114 &7052439954554263705
 MonoBehaviour:
   m_ObjectHideFlags: 0

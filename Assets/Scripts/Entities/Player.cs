@@ -5,6 +5,11 @@ using UnityEngine;
 using Mirror;
 public class Player : NetworkBehaviour
 {
+    public GameObject bombPrefab;
+
+    public Camera attachedCamera;
+    public Transform attachedVirtualCamera;
+    public SkinnedMeshRenderer rend;
     public float speed = 10f, jump = 10f;
     public LayerMask ignoreLayers;
     public float rayDistance = 10f;
@@ -19,6 +24,16 @@ public class Player : NetworkBehaviour
     private void Start()
     {
         rigid = GetComponent<Rigidbody>();
+        attachedCamera.transform.SetParent(null);
+        attachedVirtualCamera.SetParent(null);
+        if (isLocalPlayer)
+        {
+            attachedCamera.enabled = true;
+        }
+        else
+        {
+            attachedCamera.enabled = false;
+        }
     }
     private void FixedUpdate()
     {
@@ -37,6 +52,10 @@ public class Player : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                CmdSpawnBomb(transform.position);
+            }
             float inputH = Input.GetAxis("Horizontal");
             float inputV = Input.GetAxis("Vertical");
             Move(inputH, inputV);
@@ -45,6 +64,19 @@ public class Player : NetworkBehaviour
                 Jump();
             }
         }
+    }
+
+    [Command]
+    public void CmdSpawnBomb(Vector3 position)
+    {
+        GameObject bomb = Instantiate(bombPrefab, position, Quaternion.identity);
+        NetworkServer.Spawn(bomb);
+
+    }
+    public void OnDestroy()
+    {
+        Destroy(attachedCamera.gameObject);
+        Destroy(attachedVirtualCamera.gameObject);
     }
     #endregion
     #region Custom
