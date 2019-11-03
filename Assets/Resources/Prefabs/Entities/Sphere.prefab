@@ -14,8 +14,6 @@ GameObject:
   - component: {fileID: 4710837825144917849}
   - component: {fileID: 4710837825144917850}
   - component: {fileID: 4710837825144917851}
-  - component: {fileID: 4586029323552576032}
-  - component: {fileID: 7052439954554263705}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -132,33 +130,3 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4586029323552576032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710837825144917844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serverOnly: 0
-  localPlayerAuthority: 0
-  m_AssetId: cee0e501604502946961d37f78785da3
-  m_SceneId: 0
---- !u!114 &7052439954554263705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710837825144917844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncInterval: 0.05
-  compressRotation: 1

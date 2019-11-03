@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7872565523513760086}
   - component: {fileID: 489253002249364742}
-  - component: {fileID: 2166289764453337854}
-  - component: {fileID: 1113320531316177082}
   - component: {fileID: 17810844063410163}
   - component: {fileID: 1689164336480018867}
   m_Layer: 0
@@ -43,36 +41,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003540378721780357}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2166289764453337854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003540378721780357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serverOnly: 0
-  localPlayerAuthority: 1
-  m_AssetId: c193e7862adfb094b98e4510e0b74a20
-  m_SceneId: 0
---- !u!114 &1113320531316177082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003540378721780357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncInterval: 0.1
-  compressRotation: 1
 --- !u!23 &17810844063410163
 MeshRenderer:
   m_ObjectHideFlags: 0

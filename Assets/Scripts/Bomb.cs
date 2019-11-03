@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Mirror;
-public class Bomb : NetworkBehaviour
+public class Bomb : MonoBehaviour
 {
     public float explosionRadius = 2f;
 
@@ -20,24 +19,15 @@ public class Bomb : NetworkBehaviour
     public IEnumerator Explode()
     {
         yield return new WaitForSeconds(.5f);
-        CmdExplode(transform.position, explosionRadius);
-
+        Explode(transform.position, explosionRadius);
     }
 
-    void CmdExplode(Vector3 pos, float rad)
+    void Explode(Vector3 pos, float rad)
     {
         Collider[] hits = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (var hit in hits)
         {
-            if (hit.GetComponent<Enemy>())
-            {
-            NetworkServer.Destroy(hit.gameObject);
 
-            }
         }
-    }
-    void Update()
-    {
-        
     }
 }
