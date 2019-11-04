@@ -59,9 +59,21 @@ public class TestSuite
         Assert.IsTrue(oldScore != newScore);
     }
 
+    [UnityTest]
+    public IEnumerator PlayerMove()
+    {
+        float prevPos = Vector3.Magnitude(player.transform.position);
+        player.rigid.AddForce(2f, 0, 0, ForceMode.VelocityChange);
+        yield return new WaitForFixedUpdate();
+        float newPos = Vector3.Magnitude(player.transform.position);
+        Assert.IsTrue(newPos != prevPos);
+    }
+
     [TearDown]
     public void TearDown()
     {
         Object.Destroy(gameManager.gameObject);
     }
+
+
 }

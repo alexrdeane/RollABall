@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public LayerMask ignoreLayers;
     public float rayDistance = 10f;
     public bool isGrounded = false;
-    private Rigidbody rigid;
+    public Rigidbody rigid;
     #region Unity Events
     private void OnDrawGizmos()
     {
