@@ -122,12 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dcb05e4e1cbcc4489108fe7e0d2ecd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncInterval: 0.1
   bombPrefab: {fileID: 2003540378721780357, guid: c193e7862adfb094b98e4510e0b74a20,
     type: 3}
   attachedCamera: {fileID: 2613072545059440791}
-  attachedVirtualCamera: {fileID: 0}
-  rend: {fileID: 0}
   speed: 10
   jump: 10
   ignoreLayers:
@@ -135,6 +132,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   rayDistance: 0.75
   isGrounded: 0
+  rigid: {fileID: 0}
 --- !u!1 &5995849467447619749
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +146,7 @@ GameObject:
   - component: {fileID: 2091663905260821254}
   m_Layer: 9
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +201,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
